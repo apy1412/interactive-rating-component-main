@@ -1,0 +1,149 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+  --very-dark-blue-l: hsl(216, 12%, 8%);
+  --orange: hsl(25, 97%, 53%);
+  --font-weight-700: 700;
+  --font-weight-400: 400;
+  --font-family: "Overpass", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--very-dark-blue);
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+  min-height: 100vh;
+}
+
+.card,
+.thank-you {
+  background: linear-gradient(#222933, #171e28);
+  color: var(--light-grey);
+  max-width: 375px;
+  padding: 25px 28px 30px 28px;
+  border-radius: 20px;
+}
+
+.card img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  padding: 15px;
+  background: var(--dark-blue);
+}
+
+.card h1,
+.thank-you h3 {
+  color: var(--white);
+  font-size: 3.5rem;
+  font-weight: var(--font-weight-400);
+}
+.card p,
+.thank-you p {
+  color: var(--light-grey);
+  font-size: 1.4rem;
+  line-height: 1.7;
+  letter-spacing: 0px;
+}
+.card ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  padding-left: 0;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  align-items: center;
+}
+
+.btn {
+  width: 50px;
+  height: 50px;
+  background: var(--dark-blue);
+  border-radius: 100%;
+  color: var(--medium-grey);
+  border: 0;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--medium-grey);
+  color: var(--white);
+}
+
+.submit {
+  width: 100%;
+  padding: 1.5rem 2rem;
+  border-radius: 30px;
+  background-color: var(--orange);
+  border: 0;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 1.5rem;
+}
+
+.submit:active {
+  background-color: var(--white);
+  color: var(--orange);
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.thank-you {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-thank {
+  width: 220px;
+}
+
+.thank-you .jsRating {
+  color: orange;
+  background: var(--dark-blue);
+  padding: 1rem 2.5rem;
+  border-radius: 30px;
+  margin: 3rem 0 0 0;
+}
+
+.thank-you {
+  display: none;
+}
+
+.is-submitted .card {
+  display: none;
+}
+.is-submitted .thank-you {
+  display: flex;
+}
+
+.btn.selection {
+  background-color: var(--orange);
+  color: var(--white);
+}
